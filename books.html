@@ -1,0 +1,48 @@
+<input type="text" id="searchInput" placeholder="Кітап іздеу..." />
+<button onclick="searchBooks()">Іздеу</button>
+
+<div id="booksContainer"></div>
+
+<script>
+
+    async function searchBooks() {
+  const query = document.getElementById("searchInput").value;
+
+  if (!query) return; // бос болса ештеңе істемейді
+
+  const url = `https://openlibrary.org/search.json?q=${query}`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    displayBooks(data.docs);
+  } catch (error) {
+    console.log("Қате шықты:", error);
+  }
+}
+
+function displayBooks(books) {
+  const container = document.getElementById("booksContainer");
+  container.innerHTML = "";
+
+  books.slice(0, 20).forEach(book => {
+    const title = book.title || "Атауы жоқ";
+    const author = book.author_name ? book.author_name[0] : "Автор белгісіз";
+
+    const cover = book.cover_i
+      ? `https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`
+      : "https://via.placeholder.com/150";
+
+    const card = `
+      <div class="book-card">
+        <img src="${cover}" />
+        <h3>${title}</h3>
+        <p>${author}</p>
+      </div>
+    `;
+
+    container.innerHTML += card;
+  });
+}
+</script>

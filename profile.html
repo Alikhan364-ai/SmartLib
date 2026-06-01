@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartLib | Профиль</title>
+
+```
+<link rel="stylesheet" href="profile.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+```
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    
+
+```
+<div class="container nav-wrapper">
+
+    <div class="logo">
+        SmartLib
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">Басты бет</a>
+        <a href="books.html">Кітаптар</a>
+        <a href="genres.html">Жанрлар</a>
+        <a href="mybooks.html">Менің кітаптарым</a>
+        <a href="analysis.html">Анализ</a>
+
+    </div>
+
+    <div class="nav-right">
+
+        <button class="icon-btn">🔔</button>
+        
+        <button id="logoutBtn" class="logout-btn">
+             Шығу
+        </button>
+
+    </div>
+
+</div>
+```
+
+</nav>
+
+<!-- PROFILE HEADER -->
+
+<section class="profile-hero">
+
+```
+<div class="container profile-wrapper">
+
+    <div class="profile-left">
+
+        <div class="avatar-wrapper">
+
+            <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200"
+                alt="avatar"
+                id="profileAvatar"
+            >
+
+            <button id="changeAvatarBtn">
+                📷
+            </button>
+
+            <input
+                type="file"
+                id="avatarInput"
+                hidden
+            >
+
+        </div>
+
+        <div class="profile-info">
+
+            <div class="name-row">
+
+                <h1 id="profileName">
+                    Айжан Нұрқызы
+                </h1>
+
+                <button id="editNameBtn">
+                    ✎
+                </button>
+
+            </div>
+
+            <p class="quote">
+                «Кітап – ақылдың сарқыны, уақыттың ең сенімді досы.»
+            </p>
+
+            <div class="meta">
+
+                <div>📍 Қазақстан, Алматы</div>
+                <div>📅 SmartLib-ке қосылған: Наурыз 2025</div>
+
+            </div>
+
+            <div class="profile-stats">
+
+                <div class="mini-stat">
+                    <h3>24</h3>
+                    <span>Кітап оқылды</span>
+                </div>
+
+                <div class="mini-stat">
+                    <h3>12</h3>
+                    <span>Жанр зерттелді</span>
+                </div>
+
+                <div class="mini-stat">
+                    <h3>8</h3>
+                    <span>Пікір жазылды</span>
+                </div>
+
+                <div class="mini-stat">
+                    <h3>156</h3>
+                    <span>Сақталған кітаптар</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="level-card">
+
+        <p>Сіздің деңгейіңіз</p>
+
+        <div class="rank-block">
+
+            <div class="rank-icon">
+                📖
+            </div>
+
+            <div>
+
+                <h2>Кітапқұмар</h2>
+                <span>2-деңгей</span>
+
+            </div>
+
+        </div>
+
+        <div class="xp-bar">
+
+            <div class="xp-fill"></div>
+
+        </div>
+
+        <div class="xp-text">
+            750 / 1200 XP
+        </div>
+
+        <small>
+            Келесі деңгей: Оқымысты
+        </small>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- QUICK ACTIONS -->
+
+<section class="container">
+
+```
+<div class="actions-card">
+
+    <h2>Жылдам әрекеттер</h2>
+
+    <div class="actions-grid">
+
+        <button class="action-btn">
+            📚 Оқыған кітаптарым
+        </button>
+
+        <button class="action-btn">
+            💬 Пікірлерім
+        </button>
+
+        <button class="action-btn">
+            ⭐ Избранное
+        </button>
+
+        <button class="action-btn">
+            📊 Анализім
+        </button>
+
+        <button class="action-btn">
+            ⚙ Параметрлер
+        </button>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- ACHIEVEMENTS -->
+
+<section class="container achievements-section">
+
+```
+<div class="section-header">
+
+    <h2>Достижения</h2>
+
+    <a href="#">
+        Барлығын көру →
+    </a>
+
+</div>
+
+<div class="achievements-grid">
+
+    <div class="achievement-card">
+        <div class="achievement-icon purple">📖</div>
+        <h3>Алғашқы қадам</h3>
+        <p>Алғашқы кітапты аяқтадыңыз</p>
+        <span>✔</span>
+    </div>
+
+    <div class="achievement-card">
+        <div class="achievement-icon green">7</div>
+        <h3>Апта үздігі</h3>
+        <p>Аптасына 7 күн оқыдыңыз</p>
+        <span>✔</span>
+    </div>
+
+    <div class="achievement-card">
+        <div class="achievement-icon orange">🔥</div>
+        <h3>Кітапқұмар</h3>
+        <p>10 кітап оқыдыңыз</p>
+        <span>✔</span>
+    </div>
+
+    <div class="achievement-card">
+        <div class="achievement-icon red">💬</div>
+        <h3>Пікір жазушы</h3>
+        <p>Алғашқы пікір қалдырдыңыз</p>
+        <span>✔</span>
+    </div>
+
+    <div class="achievement-card progress-card">
+
+        <div class="achievement-icon blue">👑</div>
+
+        <h3>Жанр зерттеуші</h3>
+
+        <p>5 жанрды зерттеңіз</p>
+
+        <div class="mini-progress">
+            <div style="width:60%"></div>
+        </div>
+
+        <small>3/5</small>
+
+    </div>
+
+    <div class="achievement-card progress-card">
+
+        <div class="achievement-icon gray">🔒</div>
+
+        <h3>Шебер оқырман</h3>
+
+        <p>50 кітап оқыңыз</p>
+
+        <div class="mini-progress">
+            <div style="width:48%"></div>
+        </div>
+
+        <small>24/50</small>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- FAVORITE BOOKS -->
+
+<section class="container favorites-section">
+
+```
+<div class="section-header">
+
+    <h2>Избранное кітаптар</h2>
+
+    <a href="#">
+        Барлығын көру →
+    </a>
+
+</div>
+
+<div class="favorite-books-grid">
+
+    <div class="book-card">
+        <img src="гарик.jpeg">
+        <div class="book-content">
+            <h3>Гарри Поттер және философ тасы</h3>
+            <p>Дж. К. Роулинг</p>
+            <span class="tag fantasy">Фантастика</span>
+            <div class="rating">⭐ 4.8</div>
+            <button class="continue-btn">Оқу жалғастыру</button>
+        </div>
+    </div>
+
+    <div class="book-card">
+        <img src="шер.jpeg">
+        <div class="book-content">
+            <h3>Шерлок Холмс</h3>
+            <p>Артур Конан Дойл</p>
+            <span class="tag detective">Детектив</span>
+            <div class="rating">⭐ 4.7</div>
+            <button class="continue-btn">Оқу жалғастыру</button>
+        </div>
+    </div>
+
+    <div class="book-card">
+        <img src="ми бефор.jpeg">
+        <div class="book-content">
+            <h3>Бойжеткен және жігіт</h3>
+            <p>Джоджо Мойес</p>
+            <span class="tag romance">Романтика</span>
+            <div class="rating">⭐ 4.6</div>
+            <button class="continue-btn">Оқу жалғастыру</button>
+        </div>
+    </div>
+
+    <div class="book-card">
+        <img src="дю.webp">
+        <div class="book-content">
+            <h3>Дюна</h3>
+            <p>Фрэнк Герберт</p>
+            <span class="tag fantasy">Фантастика</span>
+            <div class="rating">⭐ 4.5</div>
+            <button class="continue-btn">Оқу жалғастыру</button>
+        </div>
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- GOAL SECTION -->
+
+<section class="container">
+
+```
+<div class="goal-banner">
+
+    <div>
+
+        <h2>
+            Кітап оқу саяхатыңыз жалғасуда!
+        </h2>
+
+        <p>
+            Жаңа мақсаттар қойыңыз және жаңа деңгейлерге жетіңіз.
+        </p>
+
+    </div>
+
+    <button id="goalBtn">
+        Жаңа мақсат қою
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- GOAL MODAL -->
+
+<div class="modal" id="goalModal">
+
+```
+<div class="modal-content">
+
+    <h2>
+        Жаңа оқу мақсаты
+    </h2>
+
+    <input
+        type="text"
+        placeholder="Мақсат атауы"
+        id="goalInput"
+    >
+
+    <button id="saveGoalBtn">
+        Сақтау
+    </button>
+
+</div>
+```
+
+</div>
+
+<script src="profile.js"></script>
+
+</body>
+</html>

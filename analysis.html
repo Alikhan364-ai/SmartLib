@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartLib - Талдау</title>
+
+    <link rel="stylesheet" href="analysis.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+
+    <div class="container nav-wrapper">
+
+        <div class="logo">
+            SmartLib
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Басты бет
+            </a>
+
+            <a href="books.html">
+                Кітаптар
+            </a>
+
+            <a href="genres.html">
+                Жанрлар
+            </a>
+
+            <a href="mybooks.html">
+                Менің кітаптарым
+            </a>
+
+            <a href="analysis.html"
+               class="active-link">
+                Талдау
+            </a>
+
+        </div>
+
+        <div class="nav-right">
+
+            <button class="icon-btn">
+                🔔
+            </button>
+
+           <button
+             class="login-btn"
+                onclick="window.location.href='profile.html'">
+             Профиль
+            </button>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<div class="analysis-container">
+
+    <!-- FILTERS -->
+
+    <section class="top-controls">
+
+        <div class="period-buttons">
+
+            <button class="period-btn active">
+                ☀ Бір күн
+            </button>
+
+            <button class="period-btn">
+                📅 Апталық
+            </button>
+
+            <button class="period-btn">
+                📅 Айлық
+            </button>
+
+        </div>
+
+        <div class="date-picker">
+            📅 18 мамыр, 2025
+        </div>
+
+    </section>
+
+    <!-- STATS -->
+
+    <section class="stats-grid">
+
+        <div class="stat-card purple">
+
+            <div class="stat-icon">📖</div>
+
+            <div>
+                <h2>4</h2>
+                <p>кітап оқылды</p>
+                <span>▲ 2 өткен күнге қарағанда</span>
+            </div>
+
+        </div>
+
+        <div class="stat-card orange">
+
+            <div class="stat-icon">🕒</div>
+
+            <div>
+                <h2>3 сағ 12 мин</h2>
+                <p>оқу уақыты</p>
+                <span>▲ 48 мин</span>
+            </div>
+
+        </div>
+
+        <div class="stat-card green">
+
+            <div class="stat-icon">📚</div>
+
+            <div>
+                <h2>1 250</h2>
+                <p>сөз оқылды</p>
+                <span>▲ 340 сөз</span>
+            </div>
+
+        </div>
+
+        <div class="stat-card blue">
+
+            <div class="stat-icon">🎯</div>
+
+            <div>
+                <h2>86%</h2>
+                <p>оқу белсенділігі</p>
+
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CHARTS -->
+
+    <section class="charts-grid">
+
+        <div class="chart-card">
+
+            <h3>Жанрлар бойынша үлес</h3>
+
+            <canvas id="genreChart"></canvas>
+
+        </div>
+
+        <div class="chart-card">
+
+            <h3>Оқу динамикасы</h3>
+
+            <canvas id="readingChart"></canvas>
+
+        </div>
+
+    </section>
+
+    <!-- BOOKS -->
+
+    <section class="books-section">
+
+        <div class="section-title">
+
+            <h2>Оқылған кітаптар</h2>
+
+            <a href="#">Барлығын көру →</a>
+
+        </div>
+
+        <div class="books-grid">
+
+            <div class="book-card">
+
+                <img src="гарик.jpeg">
+
+                <div class="book-info">
+
+                    <h4>Гарри Поттер және философ тасы</h4>
+
+                    <p>Дж. К. Роулинг</p>
+
+                    <span class="genre fantasy">
+                        Фантастика
+                    </span>
+
+                    <div class="rating">
+                        ⭐ 4.8
+                    </div>
+
+                    <small>
+                        Аяқталды: 17.05.2025
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="book-card">
+
+                <img src="шер.jpeg">
+
+                <div class="book-info">
+
+                    <h4>Шерлок Холмс</h4>
+
+                    <p>Артур Конан Дойл</p>
+
+                    <span class="genre detective">
+                        Детектив
+                    </span>
+
+                    <div class="rating">
+                        ⭐ 4.7
+                    </div>
+
+                    <small>
+                        Аяқталды: 14.05.2025
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="book-card">
+
+                <img src="ми бефор.jpeg">
+
+                <div class="book-info">
+
+                    <h4>Бойжеткен және жігіт</h4>
+
+                    <p>Джоджо Мойес</p>
+
+                    <span class="genre romance">
+                        Романтика
+                    </span>
+
+                    <div class="rating">
+                        ⭐ 4.6
+                    </div>
+
+                    <small>
+                        Аяқталды: 09.05.2025
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="book-card">
+
+                <img src="дю.webp">
+
+                <div class="book-info">
+
+                    <h4>Дюна</h4>
+
+                    <p>Фрэнк Герберт</p>
+
+                    <span class="genre fantasy">
+                        Фантастика
+                    </span>
+
+                    <div class="rating">
+                        ⭐ 4.5
+                    </div>
+
+                    <small>
+                        Аяқталды: 05.05.2025
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROFILE ANALYSIS -->
+
+    <section class="personality-grid">
+
+        <div class="personality-card">
+
+            <h3>
+                Менің сипаттамам ✨
+            </h3>
+
+            <div class="personality-content">
+
+                <img
+                  src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1200&auto=format&fit=crop"
+                >
+
+                <div>
+
+                    <div class="tags">
+
+                        <span>Қиялы кең</span>
+                        <span>Логикалық ойлау</span>
+                        <span>Ізденгіш</span>
+
+                    </div>
+
+                    <p>
+                        Сіз көбіне фантастика мен
+                        детектив жанрын оқисыз.
+                        Оқиғаларды талдауға және
+                        күрделі шешімдер қабылдауға
+                        бейімсіз.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="review-card">
+
+            <h3>
+                ✎ Кітапқа пікір қалдыру
+            </h3>
+
+            <div class="review-book">
+
+                <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1200&auto=format&fit=crop">
+
+                <div>
+
+                    <h4>
+                        Шерлок Холмс:
+                        Баскервиль иті
+                    </h4>
+
+                    <p>
+                        Артур Конан Дойл
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="stars">
+
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>☆</span>
+
+            </div>
+
+            <textarea
+                placeholder="Осы кітап туралы ойыңызды жазыңыз..."
+            ></textarea>
+
+            <button class="submit-review">
+                Пікір жіберу
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- VOCABULARY -->
+
+    <section class="vocabulary-section">
+
+        <div class="vocabulary-left">
+
+            <h3>
+                Сөздік қорының өсуі
+            </h3>
+
+            <div class="vocab-cards">
+
+                <div class="vocab-card">
+
+                    <h4>Бүгін</h4>
+
+                    <h2>1 250</h2>
+
+                    <span>▲ 340 сөз</span>
+
+                </div>
+
+                <div class="vocab-card">
+
+                    <h4>Апта бойынша</h4>
+
+                    <h2>6 840</h2>
+
+                    <span>▲ 1 920 сөз</span>
+
+                </div>
+
+                <div class="vocab-card">
+
+                    <h4>Ай бойынша</h4>
+
+                    <h2>24 760</h2>
+
+                    <span>▲ 5 430 сөз</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="vocabulary-chart">
+
+            <h3>
+                Сөздік қорының өсу графигі
+            </h3>
+
+            <canvas id="vocabularyChart"></canvas>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="analysis.js"></script>
+
+</body>
+</html>
